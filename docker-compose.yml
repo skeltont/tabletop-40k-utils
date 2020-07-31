@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  tabletop_utils:
+    build:
+      context: tabletop_utils
+    ports:
+      - 3000:3000
+    volumes:
+      - ./tabletop_utils:/app

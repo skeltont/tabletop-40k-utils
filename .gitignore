@@ -1,0 +1,11 @@
+# editor specific
+.vscode
+
+# virtual environments
+venv/
+
+# python
+__pycache__
+
+# project config
+config/
