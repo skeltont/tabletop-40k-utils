@@ -1,1 +1,2 @@
+cd /app
 docker-compose down
