@@ -1,4 +1,4 @@
-from flask import Blueprint, request, abort, jsonify
+from flask import Blueprint, request, abort, render_template, redirect
 from flask import current_app as app
 
 from tabletop_utils import db
@@ -8,4 +8,7 @@ from tabletop_utils.models.user import User
 def do_login():
     '''todo'''
 
-    return jsonify({"hey": 'asdf'})
+    # if request.method == "POST"
+    #     return redirect()
+
+    return render_template("login.html")
