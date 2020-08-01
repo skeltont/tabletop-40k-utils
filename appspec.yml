@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+# files:
+#   - source: /index.html
+#     destination: /var/www/html/
+hooks:
+  ApplicationStart:
+    - location: docker-compose up
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: docker-compose down
+      timeout: 300
+      runas: root
