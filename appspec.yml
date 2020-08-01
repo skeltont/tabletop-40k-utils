@@ -5,6 +5,10 @@ files:
     destination: /app
 hooks:
   BeforeInstall:
+    - location: scripts/cleanup_app
+      timeout: 300
+      runas: root
+  AfterInstall:
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
