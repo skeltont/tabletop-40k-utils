@@ -1,4 +1,0 @@
-if [ -d /app ]; then
-    rm -rf /app
-fi
-mkdir -vp /app

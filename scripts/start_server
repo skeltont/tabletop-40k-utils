@@ -1,2 +1,0 @@
-cd /app
-/usr/local/bin/docker-compose up

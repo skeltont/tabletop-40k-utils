@@ -1,0 +1,20 @@
+{
+	"family": "tabletop-utils",
+	"executionRoleArn": "arn:aws:iam::376205531064:role/ecsTaskExecutionRole",
+	"networkMode": "awsvpc",
+	"containerDefinitions": [{
+		"name": "tabletop-utils",
+		"image": "376205531064.dkr.ecr.us-west-2.amazonaws.com/tabletop-utils:latest",
+		"portMappings": [{
+			"containerPort": 3000,
+			"hostPort": 3000,
+			"protocol": "tcp"
+		}],
+		"essential": true
+	}],
+	"requiresCompatibilities": [
+		"FARGATE"
+	],
+	"cpu": "512",
+	"memory": "1024"
+}
