@@ -76,6 +76,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: tabletop-utils-cluster
-        cluster: tabletop-utils-ecs-service
+        service: tabletop-utils-ecs-service
+        cluster: tabletop-utils-cluster
         wait-for-service-stability: true
