@@ -8,4 +8,4 @@ venv/
 __pycache__
 
 # project config
-config/
+tabletop_utils/config/default.py

@@ -7,7 +7,3 @@ phases:
         commands:
             - pip install -r tabletop_utils/requirements.txt
             - python tabletop_utils/tabletop_utils/tests/app_test.py
-
-
-# AKIAVPF4Y264N3KGQEWT
-# 9VTjTl08CFFtK4o3hCCRiwpKwyURdkaASCIxA6Ve

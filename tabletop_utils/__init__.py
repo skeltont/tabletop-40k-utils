@@ -7,7 +7,7 @@ def create_app(test_config=None):
     '''application factory'''
 
     app = Flask(__name__)
-    app.config.from_pyfile("config/default.py")
+    app.config.from_pyfile("config/production.py")
 
     if test_config:
         app.config.update(test_config)
