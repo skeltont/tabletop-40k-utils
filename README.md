@@ -23,8 +23,3 @@ SQLALCHEMY_DATABASE_URI = '<sqlite_uri>'
 SQLALCHEMY_ECHO = False
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 ```
-
-## Local running
-```
-docker-compose up
-```
