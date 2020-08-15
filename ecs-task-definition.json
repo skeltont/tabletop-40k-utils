@@ -16,5 +16,15 @@
 		"FARGATE"
 	],
 	"cpu": "512",
-	"memory": "1024"
+	"memory": "1024",
+	"secrets": [
+		{
+			"name": "SQL_HOST",
+			"valueFrom": "arn:aws:secretsmanager:us-west-2:376205531064:secret:tabletop_utils_db_admin-DfwrgE:host::"
+		},
+		{
+			"name": "SQL_PASS",
+			"valueFrom": "arn:aws:secretsmanager:us-west-2:376205531064:secret:tabletop_utils_db_admin-DfwrgE:password::"
+		}
+	]
 }
