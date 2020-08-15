@@ -16,6 +16,4 @@ def create_app(test_config=None):
     with app.app_context():
         from tabletop_utils.views import login
 
-        db.create_all()
-
         return app

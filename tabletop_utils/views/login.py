@@ -11,4 +11,6 @@ def do_login():
     # if request.method == "POST"
     #     return redirect()
 
-    return render_template("login.html")
+    users = db.session.query(User)
+
+    return render_template("login.html", users=users)

@@ -50,6 +50,16 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
+    - name: Read secrets from AWS Secrets Manager into environment variables
+      uses: action-factory/aws-secrets-manager-action@v0.5.0
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-2
+        secrets: |
+          tabletop_utils_db_admin
+        parse-json: true
+
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
@@ -60,19 +70,9 @@ jobs:
         # Build a docker container and
         # push it to ECR so that it can
         # be deployed to ECS.
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker build --build-arg sql_host=tyhost --build-arg sql_pass=typass --build-arg sql_test=${TABLETOP_UTILS_DB_ADMIN_SECRETSTRING_HOST} -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-    
-    - name: Read secrets from AWS Secrets Manager into environment variables
-      uses: action-factory/aws-secrets-manager-action@v0.5.0
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-west-2
-        secrets: |
-          tabletop_utils_db_admin
-        parse-json: true
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
