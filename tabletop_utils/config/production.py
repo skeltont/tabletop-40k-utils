@@ -1,6 +1,6 @@
 import os
 
-SECRET_KEY = "TODO"
+SECRET_KEY = "TODO2"
 
 sql_host = os.environ.get("SQL_HOST")
 sql_pass = os.environ.get("SQL_PASS")
