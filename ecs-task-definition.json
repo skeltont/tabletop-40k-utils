@@ -10,6 +10,14 @@
 			"hostPort": 3000,
 			"protocol": "tcp"
 		}],
+		"logConfiguration": {
+			"logDriver": "awslogs",
+			"options": {
+				"awslogs-group": "awslogs-tabletoputils",
+				"awslogs-region": "us-west-2",
+				"awslogs-stream-prefix": "awslogs-ttutils"
+			}
+		},
 		"essential": true,
 		"secrets": [
 			{
