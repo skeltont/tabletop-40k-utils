@@ -50,16 +50,6 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
-    - name: Read secrets from AWS Secrets Manager into environment variables
-      uses: action-factory/aws-secrets-manager-action@v0.5.0
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-west-2
-        secrets: |
-          tabletop_utils_db_admin
-        parse-json: true
-
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
@@ -86,6 +76,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: tabletop-utils-ecs-service
+        service: tabletop-utils
         cluster: tabletop-utils-cluster
         wait-for-service-stability: true
