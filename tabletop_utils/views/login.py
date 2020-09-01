@@ -1,18 +1,47 @@
-import os
+'''login view'''
 
-from flask import Blueprint, request, abort, render_template, redirect
+import bcrypt
+from flask import request, render_template, redirect, session
 from flask import current_app as app
+from flask_wtf import FlaskForm
+from wtforms import validators, PasswordField, StringField
 
 from tabletop_utils import db
 from tabletop_utils.models.user import User
 
+
+class LoginForm(FlaskForm):
+    '''form object for the login page'''
+
+    username = StringField('username', validators=[
+        validators.DataRequired()
+    ])
+    password = PasswordField('password', validators=[
+        validators.DataRequired()
+    ])
+
+
 @app.route("/login", methods=["GET", "POST"])
-def do_login():
-    '''todo'''
+def login():
+    '''handle the submitted login form'''
 
-    # if request.method == "POST"
-    #     return redirect()
+    form = LoginForm(request.form)
 
-    users = db.session.query(User)
+    if request.method == "GET":
+        return render_template("login.html", form=form)
 
-    return render_template("login.html", users=users)
+    if form.validate():
+        user = db.session.query(User).\
+            filter(User.username == form.username.data).first()
+
+        if not user:
+            return redirect('/login')
+
+        form_pass_enc = form.password.data.encode('utf-8')
+        user_pass_enc = user.password.encode('utf-8')
+        if bcrypt.checkpw(form_pass_enc, user_pass_enc):
+            session["user_id"] = user.id
+
+            return redirect('/')
+
+    return render_template("login.html", form=form)

@@ -1,3 +1,7 @@
+'''application factory'''
+
+
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
@@ -14,6 +18,8 @@ def create_app(test_config=None):
 
     db.init_app(app)
     with app.app_context():
-        from tabletop_utils.views import login
+        # in order to make our app aware of our view routing.
+        # pylint: disable=unused-import,import-outside-toplevel
+        from tabletop_utils.views import login, index
 
         return app
