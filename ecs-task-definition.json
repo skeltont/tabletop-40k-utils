@@ -1,6 +1,7 @@
 {
 	"family": "tabletop-utils",
 	"executionRoleArn": "arn:aws:iam::376205531064:role/ecsTaskExecutionRole",
+	"taskRoleArn": "arn:aws:iam::376205531064:role/tabletoputils-task-role-attempt",
 	"networkMode": "awsvpc",
 	"containerDefinitions": [{
 		"name": "tabletop-utils",
