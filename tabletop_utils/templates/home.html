@@ -5,7 +5,34 @@
 {% endblock %}
 
 {% block content %}
-{% for obj in objects %}
-  {{ obj.key }}
-{% endfor %}
+<div class="ui grid">
+  <div class="row">
+    <div class="three wide column"></div>
+    <div class="ten wide column">
+      <h1>Recent Lists</h1>
+    </div>
+    <div class="three wide column"></div>
+  </div>
+  <div class="row">
+    <div class="three wide column"></div>
+    <div class="ten wide column">
+      <div class="ui link items">
+        {% for row in recents %}
+        <div class="item">
+          <div class="ui tiny image">
+            <img src="/static/faction_icons/{{row.faction}}.svg">
+          </div>
+          <div class="content">
+            <div class="header">{{row.name}}</div>
+            <div class="description">
+              <p>{{row.faction}} - {{row.owner}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="three wide column"></div>
+  </div>
+</div>
 {% endblock %}

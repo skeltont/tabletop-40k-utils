@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="图层_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 323.07693 400"
+   sodipodi:docname="T’au Number 4 [T'au'va, Greater Good].svg"
+   width="323.07693"
+   height="400"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview5"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="0.472"
+     inkscape:cx="-106.27119"
+     inkscape:cy="200"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="图层_1" />
+  <path
+     d="M 284.30769,169.23077 H 143.58974 V 6.153846 C 143.58974,2.769231 135.79487,0 126.35897,0 H 17.23077 C 7.79487,0 0,2.769231 0,6.153846 v 164.615384 28.20513 20 c 0,0.82051 17.4359,1.53846 38.76923,1.53846 h 222.76923 v 172.71795 c 0,3.69231 3.28205,6.76923 7.38462,6.76923 h 46.76923 c 4.10256,0 7.38461,-3.07692 7.38461,-6.76923 V 218.97436 181.12821 170.76923 c 0,-0.82051 -17.43589,-1.53846 -38.76923,-1.53846 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:1.02564108" />
+</svg>

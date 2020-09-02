@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.2"
+   id="图层_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 800 800"
+   sodipodi:docname="Farsight Enclaves [T'au'va, Greater Good, Renegades].svg"
+   width="800"
+   height="800"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs17" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview15"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="0.472"
+     inkscape:cx="-13.771186"
+     inkscape:cy="250"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="图层_1" />
+  <g
+     id="g12"
+     transform="scale(1.6)">
+    <ellipse
+       cx="250"
+       cy="110.9"
+       rx="83.900002"
+       ry="85.900002"
+       id="ellipse2"
+       style="fill:#8a0000" />
+    <g
+       id="g10">
+      <path
+         d="M 250,0 C 111.9,0 0,111.9 0,250 0,388.1 111.9,500 250,500 388.1,500 500,388.1 500,250 500,111.9 388.1,0 250,0 Z m 0,485 C 120.2,485 15,379.8 15,250 15,120.2 120.2,15 250,15 379.8,15 485,120.2 485,250 485,379.8 379.8,485 250,485 Z"
+         id="path4"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 322.4,48.8 c 13.7,16.7 22,38.4 22,62 0,53.3 -42.3,96.6 -94.4,96.6 -52.1,0 -94.4,-43.2 -94.4,-96.6 0,-23.6 8.3,-45.2 22,-62 -73.3,27.6 -127.3,95.8 -136.1,178 h 417 C 449.7,144.6 395.7,76.4 322.4,48.8 Z"
+         id="path6"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 292,252.5 h -73.4 c 0,0.2 0,0.3 0,0.5 0,72.9 -19.3,140.2 -51.8,194.4 25.5,11.3 53.7,17.6 83.3,17.6 32.8,0 63.8,-7.7 91.5,-21.4 C 310.3,390 291.9,324.1 291.9,253 c 0,-0.2 0.1,-0.3 0.1,-0.5 z"
+         id="path8"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

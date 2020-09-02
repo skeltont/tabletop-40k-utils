@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="图层_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 800 800"
+   sodipodi:docname="Elsy’eir [T'au'va, Greater Good, T'au Empire, Sept].svg"
+   width="800"
+   height="800"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata15">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview11"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="0.472"
+     inkscape:cx="-13.771186"
+     inkscape:cy="250"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="图层_1" />
+  <g
+     id="g8"
+     transform="scale(1.6)">
+    <path
+       d="M 250,0 C 111.9,0 0,111.9 0,250 0,388.1 111.9,500 250,500 388.1,500 500,388.1 500,250 500,111.9 388.1,0 250,0 Z m 0,485 C 120.2,485 15,379.8 15,250 15,120.2 120.2,15 250,15 379.8,15 485,120.2 485,250 485,379.8 379.8,485 250,485 Z"
+       id="path2"
+       inkscape:connector-curvature="0" />
+    <circle
+       cx="187.3"
+       cy="136.8"
+       r="70"
+       id="circle4" />
+    <path
+       d="m 448.1,208.4 -34.7,20 -57.5,-99.5 37.3,-21.5 C 347.2,61.6 281.5,41.3 218.1,52.2 c 19.1,7 36.1,20.5 47.1,39.6 24.9,43 10.1,98.1 -32.9,122.9 -43,24.8 -98.1,10.1 -122.9,-32.9 C 98.4,162.7 95.2,141.4 98.7,121.2 57.5,170.6 42.3,237.6 58.9,300.4 l 37.3,-21.5 57.5,99.6 -34.7,20 c 47.9,42.8 114,60.1 176.8,46.1 l -95.4,-165.3 103.9,-60 95.4,165.3 c 43.5,-47.4 61.6,-113.3 48.4,-176.2 z"
+       id="path6"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="图层_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 800 800"
+   sodipodi:docname="Ksi’m’yen [T'au'va, Greater Good, T'au Empire, Sept].svg"
+   width="800"
+   height="800"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs17" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview15"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="0.472"
+     inkscape:cx="-13.771186"
+     inkscape:cy="250"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="图层_1" />
+  <g
+     id="g12"
+     transform="scale(1.6)">
+    <path
+       d="m 50,250 c 0,80.1 47,149.2 115,181.1 V 178 149.6 90.4 90 h 0.2 C 168.8,79.8 174.2,70.4 181,62.2 104.5,90.3 50,163.8 50,250 Z"
+       id="path2"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 319,62.2 c 6.8,8.1 12.2,17.5 15.9,27.8 h 0.1 v 0.4 59.2 28.4 253.1 C 403,399.2 450,330.1 450,250 450,163.8 395.5,90.3 319,62.2 Z"
+       id="path4"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 202.8,196.6 v 247.8 c 15.1,3.7 31,5.6 47.2,5.6 16.2,0 32.1,-2 47.2,-5.6 V 196.6 c -13.7,8.5 -29.9,13.4 -47.2,13.4 -17.3,0 -33.5,-4.9 -47.2,-13.4 z"
+       id="path6"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 250,0 C 111.9,0 0,111.9 0,250 0,388.1 111.9,500 250,500 388.1,500 500,388.1 500,250 500,111.9 388.1,0 250,0 Z m 0,485 C 120.2,485 15,379.8 15,250 15,120.2 120.2,15 250,15 379.8,15 485,120.2 485,250 485,379.8 379.8,485 250,485 Z"
+       id="path8"
+       inkscape:connector-curvature="0" />
+    <circle
+       cx="250"
+       cy="120"
+       r="70"
+       id="circle10" />
+  </g>
+</svg>

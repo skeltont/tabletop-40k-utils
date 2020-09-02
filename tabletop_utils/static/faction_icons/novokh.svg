@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="图层_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 535.80627 800"
+   sodipodi:docname="Novokh [Yngir, Necrontyr, Necrons, Dynasty].svg"
+   width="535.80627"
+   height="800"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview5"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.472"
+     inkscape:cx="-133.77119"
+     inkscape:cy="194.1"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="图层_1" />
+  <path
+     d="M 410.71613,222.97785 H 535.80629 V 181.76198 H 410.71613 c -3.50335,-24.52344 -13.18908,-46.98609 -27.20248,-65.73931 L 470.47913,29.05719 441.42195,0 354.45647,86.96548 C 330.34518,68.8305 300.46368,58.32045 268.10922,58.32045 c -32.35445,0 -62.23596,10.71613 -86.34724,28.64503 L 94.7965,0 65.32715,29.05719 l 86.96548,86.96548 c -14.21947,18.9593 -23.69912,41.42195 -27.20247,65.73931 H 0 v 41.21587 h 125.09016 c 9.06749,63.26635 58.93869,113.13755 122.20505,122.20504 v 250.79856 c -40.39155,8.24318 -72.12777,39.97939 -80.37094,80.37095 H 123.6476 v 41.21586 h 43.27667 C 176.40392,764.55435 218.03194,800 267.90314,800 c 49.8712,0 91.49923,-35.44565 100.97888,-82.43174 h 43.27666 V 676.3524 h -43.27666 c -8.24317,-40.39156 -39.97939,-72.12777 -80.37094,-80.37095 V 345.18289 C 351.77743,336.1154 401.64863,286.2442 410.71613,222.97785 Z M 164.86347,202.36991 c 0,-56.8779 46.16177,-103.03967 103.03967,-103.03967 56.8779,0 103.03967,46.16177 103.03967,103.03967 0,56.8779 -46.16177,103.03967 -103.03967,103.03967 -56.8779,0 -103.03967,-45.95569 -103.03967,-103.03967 z m 164.86347,494.59042 c 0,34.20917 -27.61463,61.8238 -61.8238,61.8238 -34.20917,0 -61.8238,-27.61463 -61.8238,-61.8238 0,-34.20917 27.61463,-61.8238 61.8238,-61.8238 34.20917,0 61.8238,27.82071 61.8238,61.8238 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:2.0607934" />
+</svg>

@@ -9,3 +9,4 @@ __pycache__
 
 # project config
 tabletop_utils/config/default.py
+dev_script.py

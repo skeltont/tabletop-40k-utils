@@ -12,12 +12,27 @@ from tabletop_utils.models.user import User
 def home():
     '''home page for the app'''
 
-    s3 = boto3.resource('s3')
-    bucket = s3.Bucket('tabletoputils-upload')
+    client = boto3.client('s3')
 
-    objects = list()
+    response = client.list_objects(
+        Bucket='tabletoputils-upload'
+    )
 
-    for obj in bucket.objects.all():
-        objects.append(obj)
+    recents = list()
+    for obj in response['Contents']:
+        tags = client.get_object_tagging(
+            Bucket='tabletoputils-upload',
+            Key=obj['Key']
+        )
 
-    return render_template("home.html", objects=objects)
+        list_obj = dict()
+        for tag in tags['TagSet']:
+            # if tag['Key'] == 'faction':
+            #     print(tag['Value'])
+            #     recents.append(tag['Value'])
+            list_obj[tag['Key']] = tag['Value']
+        recents.append(list_obj)
+
+    print(recents)
+
+    return render_template("home.html", recents=recents)

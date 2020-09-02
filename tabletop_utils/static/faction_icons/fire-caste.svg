@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="图层_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 801.20178 800"
+   sodipodi:docname="Fire Caste [T'au'va, Greater Good, T'au Empire, Caste].svg"
+   width="801.20178"
+   height="800"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata15">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview11"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.472"
+     inkscape:cx="-63.771186"
+     inkscape:cy="199.39999"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="图层_1" />
+  <g
+     id="g8"
+     transform="matrix(2.0030045,0,0,2.0030045,-100.15022,-100.15022)">
+    <circle
+       cx="250"
+       cy="120"
+       r="70"
+       id="circle2" />
+    <path
+       d="M 160,120 C 160,98 167.9,77.9 181,62.2 104.5,90.3 50,163.8 50,250 50,355.4 131.5,441.8 235,449.4 V 208.7 C 192.4,201.6 160,164.6 160,120 Z"
+       id="path4"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 319,62.2 c 13.1,15.6 21,35.8 21,57.8 0,44.6 -32.4,81.6 -75,88.7 V 449.4 C 368.5,441.7 450,355.4 450,250 450,163.8 395.5,90.3 319,62.2 Z"
+       id="path6"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
