@@ -5,4 +5,7 @@
 {% endblock %}
 
 {% block content %}
+{% for obj in objects %}
+  {{ obj.key }}
+{% endfor %}
 {% endblock %}

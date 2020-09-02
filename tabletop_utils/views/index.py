@@ -1,5 +1,6 @@
 import os
 import bcrypt
+import boto3
 from flask import Blueprint, request, abort, render_template, redirect
 from flask import current_app as app
 
@@ -11,4 +12,12 @@ from tabletop_utils.models.user import User
 def home():
     '''home page for the app'''
 
-    return render_template("home.html")
+    s3 = boto3.resource('s3')
+    bucket = s3.Bucket('tabletoputils-upload')
+
+    objects = list()
+
+    for obj in bucket.objects.all():
+        objects.append(obj)
+
+    return render_template("home.html", objects=objects)
