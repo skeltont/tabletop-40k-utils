@@ -1,0 +1,88 @@
+{% extends "layout/internal.html" %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="ui grid">
+  <div class="row">
+    <div class="one wide column"></div>
+    <div class="eight wide column">
+      <h2 class="ui header">
+        <!-- <img src="/static/faction_icons/imperium-of-man.svg"> -->
+        <div class="content">
+          Your Recent Lists
+          <div class="sub header">Pick up where you left off</div>
+        </div>
+      </h2>
+      <table class="ui celled definition table">
+        <thead>
+          <tr>
+            <th>Public</th>
+            <th>Faction</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in user_recents %}
+          <tr>
+            <td class="collapsing">
+              <div class="ui fitted slider checkbox">
+                <input type="checkbox"> <label></label>
+              </div>
+            </td>
+            <td>{{row.faction}}</td>
+            <td>{{row.name}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        <tfoot class="full-width">
+          <tr>
+            <th></th>
+            <th colspan="4">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <a href="">View more ...</a>
+                <a class="ui right floated small primary labeled icon button" href="/wargaming/lists/new">
+                  <i class="list icon"></i>  Upload List
+                </a>
+              </div>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="one wide column"></div>
+    <div class="five wide column">
+      <!-- <div class="ui raised segment"> -->
+      <h2 class="ui header">
+        <!-- <img src="/static/faction_icons/imperium-of-man.svg"> -->
+        <div class="content">
+          Recent Public Lists
+          <div class="sub header">Take a peek at what other's are craftin up</div>
+        </div>
+      </h2>
+      <div class="ui link items">
+        {% for row in public_recents %}
+        <div class="item">
+          <div class="ui tiny image">
+            <img src="/static/faction_icons/{{row.faction}}.svg">
+          </div>
+          <div class="content">
+            <div class="header">{{row.name}}</div>
+            <div class="description">
+              <p>{{row.faction}} - {{row.owner}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!-- </div> -->
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <a href="">View more ...</a>
+      </div>
+    </div>
+    <div class="one wide column"></div>
+  </div>
+</div>
+{% endblock %}

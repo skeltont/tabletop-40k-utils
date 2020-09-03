@@ -1,8 +1,15 @@
 '''user model'''
 
-from tabletop_utils import db
+from flask_login import UserMixin
+from tabletop_utils import db, login_manager
 
-class User(db.Model):
+
+@login_manager.user_loader
+def load_user(user_id):
+    return db.session.query(User).get(int(user_id))
+
+
+class User(UserMixin, db.Model):
     '''user model'''
 
     __tablename__ = 'users'

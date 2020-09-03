@@ -1,9 +1,10 @@
 '''login view'''
 
 import bcrypt
-from flask import request, render_template, redirect, session
+from flask import request, render_template, redirect
 from flask import current_app as app
 from flask_wtf import FlaskForm
+from flask_login import current_user, login_user
 from wtforms import validators, PasswordField, StringField
 
 from tabletop_utils import db
@@ -25,6 +26,9 @@ class LoginForm(FlaskForm):
 def login():
     '''handle the submitted login form'''
 
+    if current_user.is_authenticated:
+        return redirect('/')
+
     form = LoginForm(request.form)
 
     if request.method == "GET":
@@ -40,7 +44,7 @@ def login():
         form_pass_enc = form.password.data.encode('utf-8')
         user_pass_enc = user.password.encode('utf-8')
         if bcrypt.checkpw(form_pass_enc, user_pass_enc):
-            session["user_id"] = user.id
+            login_user(user)
 
             return redirect('/')
 
