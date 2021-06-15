@@ -5,7 +5,51 @@
 {% endblock %}
 
 {% block content %}
-<form method="POST" enctype="multipart/form-data" action="/wargaming/lists/create">
-
-</form>
+<div class="ui grid">
+  <div class="row">
+    <div class="four wide column"></div>
+    <div class="eight wide column">
+      <form class="ui form" method="POST" enctype="multipart/form-data" action="/wargaming/lists/create">
+        <h4 class="ui dividing header">Upload New Army List</h4>
+        <div class="field">
+          <div class="two fields">
+            <div class="field">
+              <label>Name</label>
+              {{ form.name }}
+            </div>
+            <div class="field">
+              <label>Points</label>
+              {{ form.points }}
+            </div>
+          </div>
+        </div>
+        <div class="eight wide field">
+          <label>Faction</label>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="faction">
+            <i class="dropdown icon"></i>
+            <div class="default text"></div>
+            <div class="menu">
+              {% for choice in form.faction.choices %}
+              <div class="item" data-value="{{choice[0]}}" data-text="{{choice[1]}}">
+                <img class="ui mini avatar image" src="/static/faction_icons/{{choice[0]}}.svg">
+                {{choice[1]}}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="ui segment">
+          <div class="field">
+            <div class="ui toggle checkbox">
+              <input type="checkbox" name="gift" tabindex="0">
+              <label>Make my list public</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="ui right floated button" tabindex="0">Upload List</div>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}

@@ -2,6 +2,8 @@
 
 # @todo: add point values to the lists
 
+from pathlib import Path
+
 from flask import Flask, redirect, session
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
