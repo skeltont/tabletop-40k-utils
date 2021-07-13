@@ -11,6 +11,18 @@ class TTUtilsS3:
         self.prefix = prefix if prefix else ''
         self.client = boto3.client('s3')
 
+    def get_user_object(self, object_name):
+        '''retrieve an object for a particular user'''
+
+        # @TODO: 'key' should be tracked in database?
+
+        key = f"{self.prefix}/{object_name}"
+        obj = self.client.get_object(Bucket=self.bucket, Key=key)
+
+        # return obj.get()['Body'].read().decode('utf-8')
+
+        return obj['Body'].read().decode('utf-8')
+
     def list_user_objects(self, limit=10, public=False, user=None):
         '''list the latest objects uploaded by the user'''
 

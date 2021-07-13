@@ -1,0 +1,48 @@
+{% extends "layout/internal.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static' ,filename='css/main.css') }}">
+{% endblock %}
+
+{% block content %}
+<div id="sidebar-nav" class="ui sidebar inverted vertical menu"></div>
+
+<div id="wargaming-roster">
+  {{ list_content|safe }}
+</div>
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+  <script>
+    $(document).ready(function() {
+      $('div .battlescribe').addClass('ui segment');
+      $('div .summary').addClass('');
+      $('div .rootselection').addClass('ui raised segment')
+
+      // prepend a link to the left of the central nav
+      // so that the viewer can navigate the roster
+      $leftNavButton = $('<a class="item"><i class="list icon"></i></a>')
+      $leftNavButton.click(function() {
+        $('.ui.sidebar').sidebar('toggle');
+      })
+      $('#site-nav').prepend($leftNavButton)
+
+      $('.rootselection > h4:first-child').each(function(index) {
+        var navDisplay = $(this).text().trim()
+        var navId = $(this).text().trim() + "-" + index;
+        $(this).attr('id', navId)
+        $leftNavLink = $('<a class="item" href="#' + navId + '"> ' + navDisplay + '</a>')
+        $leftNavLink.click(function() {
+          $('.ui.sidebar').sidebar('toggle');
+        })
+        $('#sidebar-nav').append($leftNavLink)
+      })
+
+      $('table').each(function(index) {
+        $(this).addClass('ui celled table unstackable')
+      });
+    });
+  </script>
+{% endblock %}
