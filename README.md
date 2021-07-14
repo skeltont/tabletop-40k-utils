@@ -22,6 +22,10 @@ after pulling down the repo, add config
 ```
 mkdir tabletop_utils/tabletop_utils/config;
 ```
+set flask environment variable to use local config
+```
+export FLASK_ENV=development
+```
 create config file
 ```
 vim tabletop_utils/tabletop_utils/config/default.py
