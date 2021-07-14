@@ -7,21 +7,26 @@ from pathlib import Path
 from flask import Flask, redirect, session
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 db = SQLAlchemy()
+migrate = Migrate()
 login_manager = LoginManager()
-
 
 def create_app(test_config=None):
     '''application factory'''
 
     app = Flask(__name__)
-    app.config.from_pyfile("config/production.py")
+    if app.config['ENV'] == 'development':
+        app.config.from_pyfile("config/default.py")
+    else:
+        app.config.from_pyfile("config/production.py")
 
     if test_config:
         app.config.update(test_config)
 
     db.init_app(app)
+    migrate.init_app(app, db)
     login_manager.init_app(app)
 
     with app.app_context():

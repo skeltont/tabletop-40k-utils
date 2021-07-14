@@ -11,3 +11,4 @@ boto3==1.14.43
 cryptography==3.3.2
 markdown==3.3.4
 beautifulsoup4==4.9.3
+Flask-Migrate==3.0.1

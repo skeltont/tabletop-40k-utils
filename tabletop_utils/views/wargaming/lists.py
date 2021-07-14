@@ -9,6 +9,8 @@ from wtforms import (
     validators, StringField, SelectField, BooleanField, IntegerField
 )
 
+from tabletop_utils.models import rosters
+
 # from tabletop_utils.helpers.aws_s3 import TTUtilsS31
 
 
