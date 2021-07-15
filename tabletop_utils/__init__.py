@@ -37,15 +37,15 @@ def create_app(test_config=None):
         from tabletop_utils.views import login
         from tabletop_utils.views.wargaming import lists
 
-        @app.context_processor
-        def inject_dict_for_all_templates():
-            uri = request.environ['REQUEST_URI'].split('/')
+        # @app.context_processor
+        # def inject_dict_for_all_templates():
+        #     uri = request.environ['REQUEST_URI'].split('/')
 
-            return {
-                "path": {
-                    "root": uri[1]
-                }
-            }
+        #     return {
+        #         "path": {
+        #             "root": uri[1]
+        #         }
+        #     }
 
         @app.route('/', methods=["GET"])
         def root_redirect():
