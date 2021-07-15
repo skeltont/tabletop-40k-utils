@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="ui grid">
+<div class="ui stackable grid" style="margin-top: 60px;">
   <div class="row">
     <div class="one wide column"></div>
     <div class="eight wide column">
@@ -16,24 +16,26 @@
           <div class="sub header">Pick up where you left off</div>
         </div>
       </h2>
-      <table class="ui celled definition table">
+      <table class="ui celled definition table unstackable">
         <thead>
           <tr>
             <th>Public</th>
-            <th>Faction</th>
             <th>Name</th>
+            <th>Faction</th>
+            <th>Created At</th>
           </tr>
         </thead>
         <tbody>
-          {% for row in user_recents %}
+          {% for roster in user_recents %}
           <tr>
             <td class="collapsing">
               <div class="ui fitted slider checkbox">
-                <input type="checkbox"> <label></label>
+                <input class="roster-public-switch" type="checkbox" {{ 'checked="checked"' if roster.public else "" }} data-id="{{roster.id}}"><label></label>
               </div>
             </td>
-            <td>{{row.faction}}</td>
-            <td>{{row.name}}</td>
+            <td><a href="/wargaming/rosters/{{roster.id}}">{{ roster.name }}</a></td>
+            <td>{{roster.faction}}</td>
+            <td>{{roster.create_datetime}}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -43,7 +45,7 @@
             <th colspan="4">
               <div style="display: flex; align-items: center; justify-content: space-between;">
                 <a href="">View more ...</a>
-                <a class="ui right floated small primary labeled icon button" href="/wargaming/lists/new">
+                <a class="ui right floated small primary labeled icon button" href="/wargaming/rosters/new">
                   <i class="list icon"></i>  Upload List
                 </a>
               </div>
@@ -54,27 +56,38 @@
     </div>
     <div class="one wide column"></div>
     <div class="five wide column">
-      <!-- <div class="ui raised segment"> -->
       <h2 class="ui header">
-        <!-- <img src="/static/faction_icons/imperium-of-man.svg"> -->
         <div class="content">
           Recent Public Lists
           <div class="sub header">Take a peek at what other's are craftin up</div>
         </div>
       </h2>
-      <div class="ui link items">
-        {% for row in public_recents %}
+      <!-- <div class="ui link items">
+        {% for roster in public_recents %}
         <div class="item">
           <div class="ui tiny image">
-            <img src="/static/faction_icons/{{row.faction}}.svg">
+            <img src="/static/faction_icons/{{roster.faction}}.svg">
           </div>
           <div class="content">
-            <div class="header">{{row.name}}</div>
+            <div class="header">{{roster.name}}</div>
             <div class="description">
-              <p>{{row.faction}} - {{row.owner}}</p>
+              <p>{{roster.faction}} - {{roster.user.username}}</p>
             </div>
           </div>
         </div>
+        {% endfor %}
+      </div> -->
+
+      <div class="ui large feed">
+        {% for roster in public_recents %}
+          <div class="event">
+            <div class="label">
+              <img src="/static/faction_icons/{{roster.faction}}.svg" style="border-radius: 0;">
+            </div>
+            <div class="content">
+              <a href="/wargaming/rosters/{{roster.id}}">{{ roster.name }}</a> - <i>{{ roster.user.username }}</i>
+            </div>
+          </div>
         {% endfor %}
       </div>
       <!-- </div> -->
@@ -85,4 +98,26 @@
     <div class="one wide column"></div>
   </div>
 </div>
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+<script>
+  $(document).ready(function () {
+    console.log('wargaming index loaded')
+
+    $('.roster-public-switch').each(function (index) {
+      let switchId = $(this).data("id")
+      $(this).change(function() {
+        $.ajax({
+          url: '/wargaming/rosters/' + switchId + '/make_public',
+          type: 'PUT',
+          success: function(result) {
+            console.log(result)
+          }
+        })
+      })
+    });
+  });
+</script>
 {% endblock %}

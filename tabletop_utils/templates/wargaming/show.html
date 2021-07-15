@@ -9,7 +9,7 @@
 <div id="sidebar-nav" class="ui sidebar inverted vertical menu"></div>
 
 <div id="wargaming-roster">
-  {{ list_content|safe }}
+  {{ roster_content|safe }}
 </div>
 {% endblock %}
 
@@ -17,6 +17,8 @@
   {{ super() }}
   <script>
     $(document).ready(function() {
+      console.log('wargaming show loaded')
+
       $('div .battlescribe').addClass('ui segment');
       $('div .summary').addClass('');
       $('div .rootselection').addClass('ui raised segment')
