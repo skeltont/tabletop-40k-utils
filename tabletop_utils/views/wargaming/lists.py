@@ -84,7 +84,6 @@ def show(roster_id):
         abort(405)
 
     ttutils_s3 = TTUtilsS3('tabletoputils-upload', prefix='wargaming/rosters')
-    print(roster.object)
     uploaded_html = ttutils_s3.get_user_object(roster.object)
 
     soup = BeautifulSoup(uploaded_html)

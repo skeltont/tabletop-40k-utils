@@ -15,6 +15,7 @@ class Roster(db.Model):
     faction = db.Column(db.String(80))
     object = db.Column(db.String(80), unique=True, nullable=False)
     public = db.Column(db.Boolean, default=False, nullable=False)
+    points = db.Column(db.Integer)
     create_datetime = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
     user = db.relationship("User")
