@@ -37,6 +37,7 @@ def create_app(test_config=None):
         from tabletop_utils.views import login
         from tabletop_utils.views.wargaming import lists
 
+        # not necessary for now, but I will need this at some point.
         # @app.context_processor
         # def inject_dict_for_all_templates():
         #     uri = request.environ['REQUEST_URI'].split('/')

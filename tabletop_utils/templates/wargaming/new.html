@@ -2,10 +2,11 @@
 
 {% block head %}
 {{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static' ,filename='css/main.css') }}">
 {% endblock %}
 
 {% block content %}
-<div class="ui grid">
+<div class="ui grid" style="margin-top: 70px;">
   <div class="row">
     <div class="four wide column"></div>
     <div class="eight wide column">
@@ -32,7 +33,7 @@
             <div class="menu">
               {% for choice in form.faction.choices %}
               <div class="item" data-value="{{choice[0]}}" data-text="{{choice[1]}}">
-                <img class="ui mini avatar image" src="/static/faction_icons/{{choice[0]}}.svg">
+                <img class="dropdown-image" src="/static/faction_icons/{{choice[0]}}.svg" />
                 {{choice[1]}}
               </div>
               {% endfor %}

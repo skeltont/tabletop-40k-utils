@@ -14,27 +14,83 @@ The icons themselves were pulled from these sources:
 Web tool that will do things like:
 - render uploaded battlescribe HTML rosters in a more manageable way
 - generate match rules / settings
-- dice roller (maybe, seems kind of overly done)
 - custom rollable tables
 
+## Requirements
+- relational database. uses RDS in prod, but you can use sqlite, mysql, etc.
+- python 3.8
+- aws s3 bucket access
+
 ## Local Setup
-after pulling down the repo, add config
-```
-mkdir tabletop_utils/tabletop_utils/config;
-```
 set flask environment variable to use local config
 ```
-export FLASK_ENV=development
+(linux) export FLASK_ENV=development
+(powershell) $Env:FLASK_ENV="development"
 ```
+
 create config file
 ```
-vim tabletop_utils/tabletop_utils/config/default.py
+touch tabletop_utils/tabletop_utils/config/default.py
 ```
+
 replace `<values>` with yours
 ```
-SECRET_KEY = "<secret_key>"
+SECRET_KEY = "<your secret key>"
 
-SQLALCHEMY_DATABASE_URI = '<sqlite_uri>'
+SQLALCHEMY_DATABASE_URI = '<database connection string>'
 SQLALCHEMY_ECHO = False
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+TEMPLATES_AUTO_RELOAD = True
+```
+
+install python dependencies
+
+I recommend using [venv](https://docs.python.org/3/library/venv.html) to manage your project specific dependencies
+```
+pip install -r requirements.txt
+```
+
+apply migrations
+```
+flask db upgrade
+```
+
+If using vscode, create a launch.json file to run this in the debugger
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "app.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "1"
+            },
+            "args": [
+                "run"
+            ],
+            "jinja": true
+        }
+    ]
+}
+```
+
+if not, you can run with
+```
+gunicorn --bind 0.0.0.0:3000 wsgi:app --reload
+```
+
+## Running the Container
+build the image
+```
+docker build -f Dockerfile -t tabletop-utils .
+```
+
+run the container
+```
+sudo docker run --network=host -e FLASK_ENV=development tabletop_utils
 ```

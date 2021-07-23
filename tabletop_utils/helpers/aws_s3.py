@@ -14,12 +14,8 @@ class TTUtilsS3:
     def get_user_object(self, object_name):
         '''retrieve an object for a particular user'''
 
-        # @TODO: 'key' should be tracked in database?
-
         key = f"{self.prefix}/{object_name}"
         obj = self.client.get_object(Bucket=self.bucket, Key=key)
-
-        # return obj.get()['Body'].read().decode('utf-8')
 
         return obj['Body'].read().decode('utf-8')
 

@@ -15,3 +15,7 @@ h1, h2, h3 {
 div > .battlescribe {
     margin-left: 100px;
 }
+
+.dropdown-image {
+    width: 10px;
+}
